@@ -10,6 +10,7 @@ button.addEventListener("click", () => {
     }
 
     const squareWidth = width / numberOfSquares;
+    let opacity = 0;
     for(let i = 0; i < numberOfSquares**2; i++) {
         const square = document.createElement("div");
         square.classList.add("square");
@@ -17,7 +18,12 @@ button.addEventListener("click", () => {
         square.style.height = `${squareWidth}px`;
         container.appendChild(square);
         square.addEventListener("mouseover", () => {
-            square.classList.add("hovered");
+            square.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            square.style.opacity = `${opacity}%`;
+            if(opacity == 100) {
+                alert("YAY!");
+            }
+            opacity += 10;
         });
     }
 });
