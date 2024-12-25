@@ -1,0 +1,16 @@
+.square {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 800px;
+    height: 800px;
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hovered {
+    background-color: blue;
+}
